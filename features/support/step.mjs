@@ -5,7 +5,7 @@ import axios from 'axios';
 let createdRecipeId;
 
 Given('I have a valid token', async function () {
-  this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ4eXpAYWJjLmNvbSIsImlhdCI6MTcxMzI1NTk2NSwiZXhwIjoxNzEzMzQyMzY1fQ.0RvrxVrkG6pQNGw0tjcDFqQuhmbVCmUcXuEy1brMED0';
+  this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhYmNAYWJjLmNvbSIsImlhdCI6MTcxMzM1ODYyNCwiZXhwIjoxNzEzNDQ1MDI0fQ.L6cuV3bPtBzyKerVqYzhePsREKzuXOzvNHNV0F1t3_4';
 });
 
 When('I create a new recipe with title {string} and body {string}', async function (title, body) {
@@ -30,6 +30,8 @@ Then('I should receive a successful response with the created recipe', function 
   expect(createdRecipeId).to.not.be.undefined;
 });
 
+
+// 2nd Scenario
 Given('I have an invalid token', function () {
   this.token = 'mock-invalid-token';
 });

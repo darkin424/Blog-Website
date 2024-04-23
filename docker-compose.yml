@@ -13,6 +13,18 @@ services:
           - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
         networks:
           - keploy-network
+    
+    app:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      container_name: bunSqlApp
+      ports:
+        - "4040:4040"
+      depends_on:
+        - postgres
+      networks:
+        - keploy-network
 
 networks:
   keploy-network:

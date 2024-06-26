@@ -1,0 +1,59 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/login
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Content-Length: "63"
+            Content-Type: application/json
+            Host: localhost:4040
+            Postman-Token: 8e1065c6-634d-4e8d-97ce-ce7a59927717
+            User-Agent: PostmanRuntime/7.32.1
+        body: |-
+            {
+                "email":"isssalcupnamde@abc.com",
+                "password":"1234"
+            }
+        timestamp: 2024-06-06T16:19:43.938450923+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "233"
+            Content-Type: application/json
+            Date: Thu, 06 Jun 2024 10:49:43 GMT
+        body: '{"message":"User logged in successfully","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE3NjcwOTg0LCJleHAiOjE3MTc3NTczODR9.Q1aIVnLTil15EnCa441tW6fi5ler--0mJheGigPCX18"}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-06-06T16:19:46.065953924+05:30
+    objects: []
+    assertions:
+        noise:
+            body.token: []
+            header.Date: []
+            header.date: []
+    created: 1717670986
+curl: |-
+    curl --request POST \
+      --url http://localhost:4040/login \
+      --header 'Accept: */*' \
+      --header 'Cache-Control: no-cache' \
+      --header 'User-Agent: PostmanRuntime/7.32.1' \
+      --header 'Connection: keep-alive' \
+      --header 'Host: localhost:4040' \
+      --header 'Content-Type: application/json' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Postman-Token: 8e1065c6-634d-4e8d-97ce-ce7a59927717' \
+      --data '{
+        "email":"isssalcupnamde@abc.com",
+        "password":"1234"
+    }'

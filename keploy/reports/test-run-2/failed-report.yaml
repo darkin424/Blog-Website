@@ -1,0 +1,398 @@
+version: api.keploy.io/v1beta1
+name: failed-report
+status: FAILED
+success: 2
+failure: 2
+total: 4
+tests:
+    - kind: Http
+      name: failed
+      status: PASSED
+      started: 1719392756
+      completed: 1719392756
+      test_case_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      mock_path: /home/sonichigi.linux/Blog-Website/keploy/failed/mocks
+      test_case_id: test-1
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/signup
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Content-Length: "82"
+            Content-Type: application/json
+            Host: localhost:4040
+            Postman-Token: 4cc497ff-e03d-4721-b49a-386d02f03d02
+            User-Agent: PostmanRuntime/7.32.1
+        body: |-
+            {
+                "name":"Yash",
+                "email":"isssalcupnamde@abc.com",
+                "password":"1234"
+            }
+        timestamp: 2024-06-06T16:19:32.162413513+05:30
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "216"
+            Content-Type: application/json
+            Date: Wed, 26 Jun 2024 09:05:56 GMT
+        body: '{"user":{"id":1,"email":"isssalcupnamde@abc.com","name":"Yash","password":"$2b$10$4ywzTTTucw2MgU20xjWGR.Ja7H09jWVC05WaRMiF9qiiKu4px/qxW","createdAt":"2024-06-06T10:49:32.314Z","updatedAt":"2024-06-06T10:49:32.314Z"}}'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      normalized_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isnormalized: false
+      delete_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdeleted: false
+      ignored_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isignored: false
+      noised_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdenoised: false
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "216"
+              actual:
+                key: Content-Length
+                value:
+                    - "216"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 06 Jun 2024 10:49:31 GMT
+              actual:
+                key: Date
+                value:
+                    - Wed, 26 Jun 2024 09:05:56 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"user":{"id":1,"email":"isssalcupnamde@abc.com","name":"Yash","password":"$2b$10$4ywzTTTucw2MgU20xjWGR.Ja7H09jWVC05WaRMiF9qiiKu4px/qxW","createdAt":"2024-06-06T10:49:32.314Z","updatedAt":"2024-06-06T10:49:32.314Z"}}'
+              actual: '{"user":{"id":1,"email":"isssalcupnamde@abc.com","name":"Yash","password":"$2b$10$4ywzTTTucw2MgU20xjWGR.Ja7H09jWVC05WaRMiF9qiiKu4px/qxW","createdAt":"2024-06-06T10:49:32.314Z","updatedAt":"2024-06-06T10:49:32.314Z"}}'
+        dep_result: []
+    - kind: Http
+      name: failed
+      status: PASSED
+      started: 1719392756
+      completed: 1719392757
+      test_case_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      mock_path: /home/sonichigi.linux/Blog-Website/keploy/failed/mocks
+      test_case_id: test-2
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/login
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Content-Length: "63"
+            Content-Type: application/json
+            Host: localhost:4040
+            Postman-Token: 8e1065c6-634d-4e8d-97ce-ce7a59927717
+            User-Agent: PostmanRuntime/7.32.1
+        body: |-
+            {
+                "email":"isssalcupnamde@abc.com",
+                "password":"1234"
+            }
+        timestamp: 2024-06-06T16:19:43.938450923+05:30
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "233"
+            Content-Type: application/json
+            Date: Wed, 26 Jun 2024 09:05:56 GMT
+        body: '{"message":"User logged in successfully","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE5MzkyNzU3LCJleHAiOjE3MTk0NzkxNTd9.KAGzdL951H4LYXlAyacqPCs9QeBqiNlQSBk5JimMGoo"}'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        body.token: []
+        header.date: []
+      normalized_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isnormalized: false
+      delete_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdeleted: false
+      ignored_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isignored: false
+      noised_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdenoised: false
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "233"
+              actual:
+                key: Content-Length
+                value:
+                    - "233"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 06 Jun 2024 10:49:43 GMT
+              actual:
+                key: Date
+                value:
+                    - Wed, 26 Jun 2024 09:05:56 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"message":"User logged in successfully","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE3NjcwOTg0LCJleHAiOjE3MTc3NTczODR9.Q1aIVnLTil15EnCa441tW6fi5ler--0mJheGigPCX18"}'
+              actual: '{"message":"User logged in successfully","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE5MzkyNzU3LCJleHAiOjE3MTk0NzkxNTd9.KAGzdL951H4LYXlAyacqPCs9QeBqiNlQSBk5JimMGoo"}'
+        dep_result: []
+    - kind: Http
+      name: failed
+      status: FAILED
+      started: 1719392757
+      completed: 1719392757
+      test_case_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      mock_path: /home/sonichigi.linux/Blog-Website/keploy/failed/mocks
+      test_case_id: test-3
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/create-post
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE3NjcwOTg0LCJleHAiOjE3MTc3NTczODR9.Q1aIVnLTil15EnCa441tW6fi5ler--0mJheGigPCX18
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Content-Length: "63"
+            Content-Type: application/json
+            Host: localhost:4040
+            Postman-Token: af252c12-4ac1-4fb5-be06-1ff543f296cc
+            User-Agent: PostmanRuntime/7.32.1
+        body: |-
+            {
+                "title":"Anime",
+                "body":"AOT from quantum universe"
+            }
+        timestamp: 2024-06-06T16:20:06.880129995+05:30
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "25"
+            Content-Type: application/json
+            Date: Wed, 26 Jun 2024 09:05:56 GMT
+        body: '{"error":"Invalid token"}'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        body."createdat": []
+        body."updatedat": []
+        body.recipe.createdat: []
+        body.recipe.updatedat: []
+        header.content-length: []
+        header.date: []
+      normalized_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isnormalized: false
+      delete_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdeleted: false
+      ignored_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isignored: false
+      noised_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdenoised: false
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "159"
+              actual:
+                key: Content-Length
+                value:
+                    - "25"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 06 Jun 2024 10:50:06 GMT
+              actual:
+                key: Date
+                value:
+                    - Wed, 26 Jun 2024 09:05:56 GMT
+        body_result:
+            - normal: false
+              type: JSON
+              expected: '{"recipe":{"id":1,"title":"Anime","body":"AOT from quantum universe","createdAt":"2024-06-06T10:50:06.885Z","updatedAt":"2024-06-06T10:50:06.885Z","userId":1}}'
+              actual: '{"error":"Invalid token"}'
+        dep_result: []
+    - kind: Http
+      name: failed
+      status: FAILED
+      started: 1719392757
+      completed: 1719392757
+      test_case_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      mock_path: /home/sonichigi.linux/Blog-Website/keploy/failed/mocks
+      test_case_id: test-4
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/posts
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Host: localhost:4040
+            Postman-Token: 43ac2123-453b-4393-a212-b35a95b17008
+            User-Agent: PostmanRuntime/7.32.1
+        body: ""
+        timestamp: 2024-06-06T16:20:16.40408692+05:30
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "184"
+            Content-Type: application/json
+            Date: Wed, 26 Jun 2024 09:05:56 GMT
+        body: '{"error":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nCan''t reach database server at `localhost:5432`\n\nPlease make sure your database server is running at `localhost:5432`."}'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      normalized_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isnormalized: false
+      delete_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdeleted: false
+      ignored_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isignored: false
+      noised_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdenoised: false
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "2"
+              actual:
+                key: Content-Length
+                value:
+                    - "184"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Tue, 25 Jun 2024 10:32:44 GMT
+              actual:
+                key: Date
+                value:
+                    - Wed, 26 Jun 2024 09:05:56 GMT
+        body_result:
+            - normal: false
+              type: JSON
+              expected: '[]'
+              actual: '{"error":"\nInvalid `prisma.post.findMany()` invocation:\n\n\nCan''t reach database server at `localhost:5432`\n\nPlease make sure your database server is running at `localhost:5432`."}'
+        dep_result: []
+test_set: failed

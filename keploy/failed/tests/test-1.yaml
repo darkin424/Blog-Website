@@ -1,0 +1,59 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/signup
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Content-Length: "82"
+            Content-Type: application/json
+            Host: localhost:4040
+            Postman-Token: 4cc497ff-e03d-4721-b49a-386d02f03d02
+            User-Agent: PostmanRuntime/7.32.1
+        body: |-
+            {
+                "name":"Yash",
+                "email":"isssalcupnamde@abc.com",
+                "password":"1234"
+            }
+        timestamp: 2024-06-06T16:19:32.162413513+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "216"
+            Content-Type: application/json
+            Date: Thu, 06 Jun 2024 10:49:31 GMT
+        body: '{"user":{"id":1,"email":"isssalcupnamde@abc.com","name":"Yash","password":"$2b$10$4ywzTTTucw2MgU20xjWGR.Ja7H09jWVC05WaRMiF9qiiKu4px/qxW","createdAt":"2024-06-06T10:49:32.314Z","updatedAt":"2024-06-06T10:49:32.314Z"}}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-06-06T16:19:34.345515823+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1717670974
+curl: |-
+    curl --request POST \
+      --url http://localhost:4040/signup \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Accept: */*' \
+      --header 'User-Agent: PostmanRuntime/7.32.1' \
+      --header 'Host: localhost:4040' \
+      --header 'Content-Type: application/json' \
+      --header 'Postman-Token: 4cc497ff-e03d-4721-b49a-386d02f03d02' \
+      --header 'Cache-Control: no-cache' \
+      --header 'Connection: keep-alive' \
+      --data '{
+        "name":"Yash",
+        "email":"isssalcupnamde@abc.com",
+        "password":"1234"
+    }'

@@ -1,0 +1,328 @@
+version: api.keploy.io/v1beta1
+name: failed-report
+status: FAILED
+success: 0
+failure: 4
+total: 4
+tests:
+    - kind: Http
+      name: failed
+      status: FAILED
+      started: 1719311564
+      completed: 1719311565
+      test_case_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      mock_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      test_case_id: test-1
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/signup
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Content-Length: "82"
+            Content-Type: application/json
+            Host: localhost:4040
+            Postman-Token: 4cc497ff-e03d-4721-b49a-386d02f03d02
+            User-Agent: PostmanRuntime/7.32.1
+        body: |-
+            {
+                "name":"Yash",
+                "email":"isssalcupnamde@abc.com",
+                "password":"1234"
+            }
+        timestamp: 2024-06-06T16:19:32.162413513+05:30
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "3222"
+            Content-Type: application/json
+            Date: Tue, 25 Jun 2024 10:32:44 GMT
+        body: "{\"error\":\"\\nInvalid `prisma.user.create()` invocation:\\n\\n\\nCould not figure out an ID in create\\n\\nThis is a non-recoverable error which probably happens when the Prisma Query Engine has a panic.\\n\\nhttps://github.com/prisma/prisma/issues/new?body=Hi+Prisma+Team%21+My+Prisma+Client+just+crashed.+This+is+the+report%3A%0A%23%23+Versions%0A%0A%7C+Name++++++++++++%7C+Version++++++++++++%7C%0A%7C-----------------%7C--------------------%7C%0A%7C+Node++++++++++++%7C+v21.6.0++++++++++++%7C+%0A%7C+OS++++++++++++++%7C+linux-arm64-openssl-3.0.x%7C%0A%7C+Prisma+Client+++%7C+5.15.0+++++++++++++%7C%0A%7C+Query+Engine++++%7C+12e25d8d06f6ea5a0252864dd9a03b1bb51f3022%7C%0A%7C+Database++++++++%7C+postgresql+++++++++%7C%0A%0A%0A%0A%23%23+Logs%0A%60%60%60%0Aprisma%3AtryLoadEnv+Environment+variables+not+found+at+null%0Aprisma%3AtryLoadEnv+Environment+variables+loaded+from+%2Fhome%2Fsonichigi.linux%2FBlog-Website%2F.env%0Aprisma%3Aclient+checkPlatformCaching%3Apostinstall+false%0Aprisma%3Aclient+checkPlatformCaching%3AciName+%0Aprisma%3AtryLoadEnv+Environment+variables+not+found+at+null%0Aprisma%3AtryLoadEnv+Environment+variables+loaded+from+%2Fhome%2Fsonichigi.linux%2FBlog-Website%2F.env%0Aprisma%3Aclient+dirname+%2Fhome%2Fsonichigi.linux%2FBlog-Website%2Fnode_modules%2F.prisma%2Fclient%0Aprisma%3Aclient+relativePath+..%2F..%2F..%2Fprisma%0Aprisma%3Aclient+cwd+%2Fhome%2Fsonichigi.linux%2FBlog-Website%2Fprisma%0Aprisma%3Aclient+clientVersion+5.15.0%0Aprisma%3Aclient%3AlibraryEngine+internalSetup%0Aprisma%3Aget-platform+Found+distro+info%3A%0A%7B%0A++%22targetDistro%22%3A+%22debian%22%2C%0A++%22familyDistro%22%3A+%22debian%22%2C%0A++%22originalDistro%22%3A+%22debian%22%0A%7D%0Aprisma%3Aget-platform+Trying+platform-specific+paths+for+%22debian%22+%28and+%22ubuntu%22%29%0Aprisma%3Aget-platform+Falling+back+to+%22ldconfig%22+and+other+generic+paths%0Aprisma%3Aget-platform+Command+%22ldconfig+-p+%7C+sed+%22s%2F.*%3D%3Es*%2F%2F%22+%7C+sed+%22s%7C.*%2F%7C%7C%22+%7C+grep+libssl+%7C+sort+%7C+grep+-v+%22libssl.so.0%22%22+successfully+returned+%22libssl.so%0Alibssl.so.3%0Alibssl3.so%0A%22%0Aprisma%3Aget-platform+Found+libssl.so+file+using+%22ldconfig%22+or+other+generic+paths%3A+libssl.so%0Alibssl.so.3%0Alibssl3.so%0A%0Aprisma%3Aget-platform+The+parsed+libssl+version+is%3A+3.0.x%0Aprisma%3Aclient%3Aengines%3AresolveEnginePath+enginePath+%2Fhome%2Fsonichigi.linux%2FBlog-Website%2Fnode_modules%2F.prisma%2Fclient%2Flibquery_engine-linux-arm64-openssl-3.0.x.so.node%0Aprisma%3Aclient%3AlibraryEngine+sending+request%2C+this.libraryStarted%3A+false%0Aprisma%3Aclient%3AlibraryEngine+library+starting%0Aprisma%3Aclient%3AlibraryEngine+library+started%0A%60%60%60%0A%0A%23%23+Client+Snippet%0A%60%60%60ts%0A%2F%2F+PLEASE+FILL+YOUR+CODE+SNIPPET+HERE%0A%60%60%60%0A%0A%23%23+Schema%0A%60%60%60prisma%0A%2F%2F+PLEASE+ADD+YOUR+SCHEMA+HERE+IF+POSSIBLE%0A%60%60%60%0A%0A%23%23+Prisma+Engine+Query%0A%60%60%60%0A%7B%22X%22%3Atrue%7D%7D%7D%0A%60%60%60%0A&title=Could+not+figure+out+an+ID+in+create&template=bug_report.yml\\n\\nIf you want the Prisma team to look into it, please open the link above \U0001F64F\\nTo increase the chance of success, please post your schema and a snippet of\\nhow you used Prisma Client in the issue. \\n\"}"
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "216"
+              actual:
+                key: Content-Length
+                value:
+                    - "3222"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 06 Jun 2024 10:49:31 GMT
+              actual:
+                key: Date
+                value:
+                    - Tue, 25 Jun 2024 10:32:44 GMT
+        body_result:
+            - normal: false
+              type: JSON
+              expected: '{"user":{"id":1,"email":"isssalcupnamde@abc.com","name":"Yash","password":"$2b$10$4ywzTTTucw2MgU20xjWGR.Ja7H09jWVC05WaRMiF9qiiKu4px/qxW","createdAt":"2024-06-06T10:49:32.314Z","updatedAt":"2024-06-06T10:49:32.314Z"}}'
+              actual: "{\"error\":\"\\nInvalid `prisma.user.create()` invocation:\\n\\n\\nCould not figure out an ID in create\\n\\nThis is a non-recoverable error which probably happens when the Prisma Query Engine has a panic.\\n\\nhttps://github.com/prisma/prisma/issues/new?body=Hi+Prisma+Team%21+My+Prisma+Client+just+crashed.+This+is+the+report%3A%0A%23%23+Versions%0A%0A%7C+Name++++++++++++%7C+Version++++++++++++%7C%0A%7C-----------------%7C--------------------%7C%0A%7C+Node++++++++++++%7C+v21.6.0++++++++++++%7C+%0A%7C+OS++++++++++++++%7C+linux-arm64-openssl-3.0.x%7C%0A%7C+Prisma+Client+++%7C+5.15.0+++++++++++++%7C%0A%7C+Query+Engine++++%7C+12e25d8d06f6ea5a0252864dd9a03b1bb51f3022%7C%0A%7C+Database++++++++%7C+postgresql+++++++++%7C%0A%0A%0A%0A%23%23+Logs%0A%60%60%60%0Aprisma%3AtryLoadEnv+Environment+variables+not+found+at+null%0Aprisma%3AtryLoadEnv+Environment+variables+loaded+from+%2Fhome%2Fsonichigi.linux%2FBlog-Website%2F.env%0Aprisma%3Aclient+checkPlatformCaching%3Apostinstall+false%0Aprisma%3Aclient+checkPlatformCaching%3AciName+%0Aprisma%3AtryLoadEnv+Environment+variables+not+found+at+null%0Aprisma%3AtryLoadEnv+Environment+variables+loaded+from+%2Fhome%2Fsonichigi.linux%2FBlog-Website%2F.env%0Aprisma%3Aclient+dirname+%2Fhome%2Fsonichigi.linux%2FBlog-Website%2Fnode_modules%2F.prisma%2Fclient%0Aprisma%3Aclient+relativePath+..%2F..%2F..%2Fprisma%0Aprisma%3Aclient+cwd+%2Fhome%2Fsonichigi.linux%2FBlog-Website%2Fprisma%0Aprisma%3Aclient+clientVersion+5.15.0%0Aprisma%3Aclient%3AlibraryEngine+internalSetup%0Aprisma%3Aget-platform+Found+distro+info%3A%0A%7B%0A++%22targetDistro%22%3A+%22debian%22%2C%0A++%22familyDistro%22%3A+%22debian%22%2C%0A++%22originalDistro%22%3A+%22debian%22%0A%7D%0Aprisma%3Aget-platform+Trying+platform-specific+paths+for+%22debian%22+%28and+%22ubuntu%22%29%0Aprisma%3Aget-platform+Falling+back+to+%22ldconfig%22+and+other+generic+paths%0Aprisma%3Aget-platform+Command+%22ldconfig+-p+%7C+sed+%22s%2F.*%3D%3Es*%2F%2F%22+%7C+sed+%22s%7C.*%2F%7C%7C%22+%7C+grep+libssl+%7C+sort+%7C+grep+-v+%22libssl.so.0%22%22+successfully+returned+%22libssl.so%0Alibssl.so.3%0Alibssl3.so%0A%22%0Aprisma%3Aget-platform+Found+libssl.so+file+using+%22ldconfig%22+or+other+generic+paths%3A+libssl.so%0Alibssl.so.3%0Alibssl3.so%0A%0Aprisma%3Aget-platform+The+parsed+libssl+version+is%3A+3.0.x%0Aprisma%3Aclient%3Aengines%3AresolveEnginePath+enginePath+%2Fhome%2Fsonichigi.linux%2FBlog-Website%2Fnode_modules%2F.prisma%2Fclient%2Flibquery_engine-linux-arm64-openssl-3.0.x.so.node%0Aprisma%3Aclient%3AlibraryEngine+sending+request%2C+this.libraryStarted%3A+false%0Aprisma%3Aclient%3AlibraryEngine+library+starting%0Aprisma%3Aclient%3AlibraryEngine+library+started%0A%60%60%60%0A%0A%23%23+Client+Snippet%0A%60%60%60ts%0A%2F%2F+PLEASE+FILL+YOUR+CODE+SNIPPET+HERE%0A%60%60%60%0A%0A%23%23+Schema%0A%60%60%60prisma%0A%2F%2F+PLEASE+ADD+YOUR+SCHEMA+HERE+IF+POSSIBLE%0A%60%60%60%0A%0A%23%23+Prisma+Engine+Query%0A%60%60%60%0A%7B%22X%22%3Atrue%7D%7D%7D%0A%60%60%60%0A&title=Could+not+figure+out+an+ID+in+create&template=bug_report.yml\\n\\nIf you want the Prisma team to look into it, please open the link above \U0001F64F\\nTo increase the chance of success, please post your schema and a snippet of\\nhow you used Prisma Client in the issue. \\n\"}"
+        dep_result: []
+    - kind: Http
+      name: failed
+      status: FAILED
+      started: 1719311565
+      completed: 1719311565
+      test_case_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      mock_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      test_case_id: test-2
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/login
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Content-Length: "63"
+            Content-Type: application/json
+            Host: localhost:4040
+            Postman-Token: 8e1065c6-634d-4e8d-97ce-ce7a59927717
+            User-Agent: PostmanRuntime/7.32.1
+        body: |-
+            {
+                "email":"isssalcupnamde@abc.com",
+                "password":"1234"
+            }
+        timestamp: 2024-06-06T16:19:43.938450923+05:30
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "233"
+            Content-Type: application/json
+            Date: Tue, 25 Jun 2024 10:32:44 GMT
+        body: '{"message":"User logged in successfully","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE5MzExNTY1LCJleHAiOjE3MTkzOTc5NjV9.mUtmOqtnVgyxhwAwh_MWO_CZOLtb7WFAOHT-fPIAPfA"}'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "233"
+              actual:
+                key: Content-Length
+                value:
+                    - "233"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 06 Jun 2024 10:49:43 GMT
+              actual:
+                key: Date
+                value:
+                    - Tue, 25 Jun 2024 10:32:44 GMT
+        body_result:
+            - normal: false
+              type: JSON
+              expected: '{"message":"User logged in successfully","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE3NjcwOTg0LCJleHAiOjE3MTc3NTczODR9.Q1aIVnLTil15EnCa441tW6fi5ler--0mJheGigPCX18"}'
+              actual: '{"message":"User logged in successfully","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE5MzExNTY1LCJleHAiOjE3MTkzOTc5NjV9.mUtmOqtnVgyxhwAwh_MWO_CZOLtb7WFAOHT-fPIAPfA"}'
+        dep_result: []
+    - kind: Http
+      name: failed
+      status: FAILED
+      started: 1719311565
+      completed: 1719311565
+      test_case_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      mock_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      test_case_id: test-3
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/create-post
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE3NjcwOTg0LCJleHAiOjE3MTc3NTczODR9.Q1aIVnLTil15EnCa441tW6fi5ler--0mJheGigPCX18
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Content-Length: "63"
+            Content-Type: application/json
+            Host: localhost:4040
+            Postman-Token: af252c12-4ac1-4fb5-be06-1ff543f296cc
+            User-Agent: PostmanRuntime/7.32.1
+        body: |-
+            {
+                "title":"Anime",
+                "body":"AOT from quantum universe"
+            }
+        timestamp: 2024-06-06T16:20:06.880129995+05:30
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "25"
+            Content-Type: application/json
+            Date: Tue, 25 Jun 2024 10:32:44 GMT
+        body: '{"error":"Invalid token"}'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 06 Jun 2024 10:50:06 GMT
+              actual:
+                key: Date
+                value:
+                    - Tue, 25 Jun 2024 10:32:44 GMT
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "159"
+              actual:
+                key: Content-Length
+                value:
+                    - "25"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+        body_result:
+            - normal: false
+              type: JSON
+              expected: '{"recipe":{"id":1,"title":"Anime","body":"AOT from quantum universe","createdAt":"2024-06-06T10:50:06.885Z","updatedAt":"2024-06-06T10:50:06.885Z","userId":1}}'
+              actual: '{"error":"Invalid token"}'
+        dep_result: []
+    - kind: Http
+      name: failed
+      status: FAILED
+      started: 1719311565
+      completed: 1719311565
+      test_case_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      mock_path: /home/sonichigi.linux/Blog-Website/keploy/failed
+      test_case_id: test-4
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/posts
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Host: localhost:4040
+            Postman-Token: 43ac2123-453b-4393-a212-b35a95b17008
+            User-Agent: PostmanRuntime/7.32.1
+        body: ""
+        timestamp: 2024-06-06T16:20:16.40408692+05:30
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "2"
+            Content-Type: application/json
+            Date: Tue, 25 Jun 2024 10:32:44 GMT
+        body: '[]'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "379"
+              actual:
+                key: Content-Length
+                value:
+                    - "2"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 06 Jun 2024 10:50:15 GMT
+              actual:
+                key: Date
+                value:
+                    - Tue, 25 Jun 2024 10:32:44 GMT
+        body_result:
+            - normal: false
+              type: JSON
+              expected: '[{"id":1,"title":"Anime","body":"AOT from quantum universe","createdAt":"2024-06-06T10:50:06.885Z","updatedAt":"2024-06-06T10:50:06.885Z","userId":1,"user":{"id":1,"email":"isssalcupnamde@abc.com","name":"Yash","password":"$2b$10$4ywzTTTucw2MgU20xjWGR.Ja7H09jWVC05WaRMiF9qiiKu4px/qxW","createdAt":"2024-06-06T10:49:32.314Z","updatedAt":"2024-06-06T10:49:32.314Z"},"comments":[]}]'
+              actual: '[]'
+        dep_result: []
+test_set: failed

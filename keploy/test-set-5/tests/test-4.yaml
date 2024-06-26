@@ -1,0 +1,53 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-4
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/create-post
+        header:
+            Accept: '*/*'
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE5MjI3Njk2LCJleHAiOjE3MTkzMTQwOTZ9.LOj9KzGUeqvnQ5d4sgl3UA4dEDHEXS9hGRknlPveHOw
+            Content-Length: "54"
+            Content-Type: application/json
+            Host: localhost:4040
+            User-Agent: curl/7.88.1
+        body: |-
+            {
+                "title":"Anime",
+                "body":"AOT from quantum"
+            }
+        timestamp: 2024-06-24T16:45:27.149084586+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "150"
+            Content-Type: application/json
+            Date: Mon, 24 Jun 2024 11:15:26 GMT
+        body: '{"recipe":{"id":1,"title":"Anime","body":"AOT from quantum","createdAt":"2024-06-24T11:15:27.171Z","updatedAt":"2024-06-24T11:15:27.171Z","userId":1}}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-06-24T16:45:29.260959517+05:30
+    objects: []
+    assertions:
+        noise:
+            body.recipe.createdAt: []
+            body.recipe.updatedAt: []
+            header.Date: []
+    created: 1719227729
+curl: |-
+    curl --request POST \
+      --url http://localhost:4040/create-post \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE5MjI3Njk2LCJleHAiOjE3MTkzMTQwOTZ9.LOj9KzGUeqvnQ5d4sgl3UA4dEDHEXS9hGRknlPveHOw' \
+      --header 'Content-Type: application/json' \
+      --header 'Host: localhost:4040' \
+      --header 'User-Agent: curl/7.88.1' \
+      --header 'Accept: */*' \
+      --data '{
+        "title":"Anime",
+        "body":"AOT from quantum"
+    }'

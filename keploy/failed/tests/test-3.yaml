@@ -1,0 +1,67 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-3
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/create-post
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE3NjcwOTg0LCJleHAiOjE3MTc3NTczODR9.Q1aIVnLTil15EnCa441tW6fi5ler--0mJheGigPCX18
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Content-Length: "63"
+            Content-Type: application/json
+            Host: localhost:4040
+            Postman-Token: af252c12-4ac1-4fb5-be06-1ff543f296cc
+            User-Agent: PostmanRuntime/7.32.1
+        body: |-
+            {
+                "title":"Anime",
+                "body":"AOT from quantum universe"
+            }
+        timestamp: 2024-06-06T16:20:06.880129995+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "159"
+            Content-Type: application/json
+            Date: Thu, 06 Jun 2024 10:50:06 GMT
+        body: '{"recipe":{"id":1,"title":"Anime","body":"AOT from quantum universe","createdAt":"2024-06-06T10:50:06.885Z","updatedAt":"2024-06-06T10:50:06.885Z","userId":1}}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-06-06T16:20:08.982225535+05:30
+    objects: []
+    assertions:
+        noise:
+            body."createdat": []
+            body."updatedat": []
+            body.recipe.createdAt: []
+            body.recipe.createdat: []
+            body.recipe.updatedAt: []
+            body.recipe.updatedat: []
+            header.Date: []
+            header.content-length: []
+            header.date: []
+    created: 1717671008
+curl: |-
+    curl --request POST \
+      --url http://localhost:4040/create-post \
+      --header 'Postman-Token: af252c12-4ac1-4fb5-be06-1ff543f296cc' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Host: localhost:4040' \
+      --header 'Accept: */*' \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE3NjcwOTg0LCJleHAiOjE3MTc3NTczODR9.Q1aIVnLTil15EnCa441tW6fi5ler--0mJheGigPCX18' \
+      --header 'Connection: keep-alive' \
+      --header 'User-Agent: PostmanRuntime/7.32.1' \
+      --header 'Cache-Control: no-cache' \
+      --header 'Content-Type: application/json' \
+      --data '{
+        "title":"Anime",
+        "body":"AOT from quantum universe"
+    }'

@@ -1,0 +1,50 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-3
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/login
+        header:
+            Accept: '*/*'
+            Content-Length: "63"
+            Content-Type: application/json
+            Host: localhost:4040
+            User-Agent: curl/7.88.1
+        body: |-
+            {
+                "email":"isssalcupnamde@abc.com",
+                "password":"1234"
+            }
+        timestamp: 2024-06-24T16:44:56.053378125+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "233"
+            Content-Type: application/json
+            Date: Mon, 24 Jun 2024 11:14:55 GMT
+        body: '{"message":"User logged in successfully","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc3NzYWxjdXBuYW1kZUBhYmMuY29tIiwiaWF0IjoxNzE5MjI3Njk2LCJleHAiOjE3MTkzMTQwOTZ9.LOj9KzGUeqvnQ5d4sgl3UA4dEDHEXS9hGRknlPveHOw"}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-06-24T16:44:58.224350387+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+            header.date: []
+    created: 1719227698
+curl: |-
+    curl --request POST \
+      --url http://localhost:4040/login \
+      --header 'User-Agent: curl/7.88.1' \
+      --header 'Accept: */*' \
+      --header 'Content-Type: application/json' \
+      --header 'Host: localhost:4040' \
+      --data '{
+        "email":"isssalcupnamde@abc.com",
+        "password":"1234"
+    }'

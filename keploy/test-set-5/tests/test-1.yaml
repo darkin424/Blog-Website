@@ -1,0 +1,51 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4040/signup
+        header:
+            Accept: '*/*'
+            Content-Length: "82"
+            Content-Type: application/json
+            Host: localhost:4040
+            User-Agent: curl/7.88.1
+        body: |-
+            {
+                "name":"Yash",
+                "email":"isssalcupnamde@abc.com",
+                "password":"1234"
+            }
+        timestamp: 2024-06-24T16:44:01.471857956+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "125"
+            Content-Type: application/json
+            Date: Mon, 24 Jun 2024 11:14:00 GMT
+        body: '{"error":"\nInvalid `prisma.user.create()` invocation:\n\n\nThe table `public.User` does not exist in the current database."}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-06-24T16:44:03.7742212+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1719227643
+curl: |-
+    curl --request POST \
+      --url http://localhost:4040/signup \
+      --header 'Host: localhost:4040' \
+      --header 'User-Agent: curl/7.88.1' \
+      --header 'Accept: */*' \
+      --header 'Content-Type: application/json' \
+      --data '{
+        "name":"Yash",
+        "email":"isssalcupnamde@abc.com",
+        "password":"1234"
+    }'
